@@ -1,0 +1,327 @@
+@charset "UTF-8"; 
+* {
+  box-sizing: border-box;
+}
+@media screen and (max-width: 650px) {
+  .swiper-slide{
+    padding-top: 30px!important;
+    left: 132px;
+  }
+  .swiper-slide .imgbox img{
+    width: 220px;
+  }
+  .swiper-slide .detail{
+    display: none;
+  }
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+  .color{
+    width: 50px;
+    height: 50px;
+}
+}
+@media screen and (max-width: 1200px){
+  .swiper-slide{
+    padding-bottom: 112px!important;
+    padding-right: 80px!important;
+  }
+}
+  :root {
+  --star-size: 20px;
+  --star-color: #cccccc;
+  --star-background: #fc0;
+}
+.Stars {
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  font-size: var(--star-size);
+  font-family: Times;
+  line-height: 1;
+}
+.Stars::before {
+  content: "★★★★★";
+  letter-spacing: 3px;
+  background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*-------------------------------------------------------------------------------------
+*/.color{
+    width: 60px;
+    height: 60px;
+    background-color: #bfe7f6;
+    border-radius: 50px;
+}
+/*-------------------------------------------------------------------------------------*/  
+    html,
+    body {
+      position: relative;
+      height: 100%;
+      
+    }
+    h1,h2,h3{
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: Candara, sans-serif;
+      font-size: 14px;
+      color: #000;
+    }
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.container .content{
+  background: #f2f5f7;
+}
+
+/*-------------------------------------------------------------------------------------------------
+*/
+.topnav {position: relative;background-color: #333;overflow: hidden;}
+.topnav-centered a {float: none;position: absolute; top: 50%;left: 50%;transform: translate(-50%, -50%);
+}
+/* Change the color of links on hover */
+.topnav a {float: left;color: #f2f2f2;text-align: center;padding: 14px 16px;text-decoration: none;font-size: 17px;}
+/* Add a color to the active/current link */
+.topnav a.active {background-color: #4CAF50;color: white;}
+.topnav a:hover {background-color: #ddd;color: black;}
+.imgbx img{width: 150px;border-radius: 10px;}
+.topnav-right { float: right!important;}
+.topnav .icon {display: none;}
+
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child){display: none;}
+  .topnav .topnav-right a:not(:first-child){display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none !important;
+    display: block;
+    text-align: center ;
+  }
+}
+/*----------------------------------------------------------------------------------------------------
+*/  .swiper-container {
+      width: 100%;
+      height: 60%;
+      background: #000;
+    }
+
+    .swiper-slide {
+      font-size: 18px;
+      color: #fff;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-left: 80px;
+      padding-top: 70px;
+      padding-right: 60px;
+      padding-bottom: 124px;
+      display: flex;
+    }
+    .detail{
+      padding-left: 20px;
+      color: #6c767e;
+      padding-right: 10px;
+    }
+
+    .parallax-bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 130%;
+      -webkit-background-size: cover;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .swiper-slide .title {
+      font-size: 31px;
+      font-weight: 300;
+    }
+
+    .swiper-slide .subtitle {
+      font-size: 21px;
+    }
+
+    .swiper-slide .text {
+      font-size: 14px;
+      max-width: 400px;
+      line-height: 1.3;
+    }
+    .text{
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient:vertical;
+      text-overflow: ellipsis;
+}
+    .swiper-slide1 {
+      text-align: center;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+/*--------------------------------------------------------------------------------*/
+.leftcolumn {   
+  float: left;
+  width: 80%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 20%;
+
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   margin-top: 30px;
+   margin-left: 10px;
+   border: solid 1px;
+   border-color: #111;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+/*----------------------------------------------------------------------------------*/
+.card-container-detail{
+  width: 100%;
+  position: relative;
+  display: flex;
+
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.card-container-detail .card-detail{
+      font-size: 18px;
+      color: #fff;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      display: flex;
+      width: 47%;
+      padding: 10px;
+      margin-top: 40px;
+      margin-left: 20px;
+      background: #ffffff;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.9);
+
+}
+.card-container-detail .card-detail .imgBox{
+  position: relative;
+  width: 150px;
+  height: 180px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.card-container-detail .card-detail .imgBox img{
+  width: 150px;
+  height: 230px;
+  border-radius: 4px;
+}
+/*-----------------------------------------------------------------------------------
+*/
+.card-author{
+  display: flex;
+}
+.card-book{
+  text-align: -webkit-center;
+  margin: 10px;
+}
+/*---------------------------------------------------------------------------*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
